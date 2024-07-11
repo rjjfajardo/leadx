@@ -1,0 +1,23 @@
+{
+  "extends": "next/core-web-vitals",
+  "plugins": ["simple-import-sort", "import"],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["builtin", "external"],
+          ["internal", "parent", "sibling", "index"]
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "semi": ["error", "never"],
+    "prettier/prettier": ["error", { "semi": false, "singleQuote": true }]
+  }
+}
